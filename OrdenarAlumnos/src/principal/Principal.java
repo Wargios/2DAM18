@@ -20,10 +20,10 @@ public class Principal {
 	}
 
 	public static void OrdenarAlumnos(String nombreArchivoLectura, String nombreArchivoEscritura) throws IOException {
-		String linea = null;
+		String linea;
 		FileReader archivoLectura;
 		BufferedReader filtroLectura;
-		FileWriter archivoEscritura = null;
+		FileWriter archivoEscritura;
 		PrintWriter filtroEscritura;
 
 		archivoLectura = new FileReader(nombreArchivoLectura);
