@@ -1,0 +1,6 @@
+Glez Fran;2DAM;23;7
+Dekk Rafa;2DAM;22;2
+Prie Javi;2DAM;23;4
+Vela Javi;2DAM;25;1
+Gome Pablo;2DAM;22;8
+Bern Sergio;2DAM;21;6
