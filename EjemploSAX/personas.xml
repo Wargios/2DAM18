@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<personas>
+<persona sexo='H'>
+<nombre>Antonio</nombre>
+<edad>53</edad>
+</persona>
+<persona sexo='H'>
+<nombre>Juan</nombre>
+<edad>26</edad>
+</persona>
+<persona sexo='M'>
+<nombre>Maria</nombre>
+<edad>32</edad>
+</persona>
+<persona sexo='M'>
+<nombre>Laura</nombre>
+<edad>19</edad>
+</persona>
+</personas>

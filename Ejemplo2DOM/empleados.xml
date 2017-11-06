@@ -1,0 +1,20 @@
+<empleados>
+	<empleado tipo='A'>
+		<id> 1 </id>
+		<nombre> Sara</nombre>
+		<apellidos> 
+			<apellido>Osuna </apellido>
+			<apellido>Alvarez </apellido>
+		</apellidos>
+	</empleado>
+	<empleado>
+		<id> 2 </id>
+		<nombre> Juan</nombre>
+		<apellidos> 
+			<apellido>Albero </apellido>
+			<apellido>García </apellido>
+		</apellidos>
+	</empleado>
+</empleados>
+
+
