@@ -1,0 +1,184 @@
+2017-12-04 11:36:24 database: wrong user or password; user: ""
+org.h2.message.DbException: Nombre de usuario ó password incorrecto
+Wrong user name or password [28000-193]
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.message.DbException.get(DbException.java:144)
+	at org.h2.engine.Engine.openSession(Engine.java:104)
+	at org.h2.engine.Engine.openSession(Engine.java:176)
+	at org.h2.engine.Engine.createSessionAndValidate(Engine.java:154)
+	at org.h2.engine.Engine.createSession(Engine.java:137)
+	at org.h2.engine.Engine.createSession(Engine.java:27)
+	at org.h2.engine.SessionRemote.connectEmbeddedOrServer(SessionRemote.java:349)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:115)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:99)
+	at org.h2.Driver.connect(Driver.java:69)
+	at java.sql.DriverManager.getConnection(DriverManager.java:664)
+	at java.sql.DriverManager.getConnection(DriverManager.java:270)
+	at ejercicio2.PrincipalEjercicio2.main(PrincipalEjercicio2.java:25)
+Caused by: org.h2.jdbc.JdbcSQLException: Nombre de usuario ó password incorrecto
+Wrong user name or password [28000-193]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:345)
+	... 15 more
+2017-12-04 11:37:09 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Error de Sintaxis en sentencia SQL "SELECT * FROM PROVEEDOR[*]'"
+Syntax error in SQL statement "SELECT * FROM PROVEEDOR[*]'"; SQL statement:
+SELECT * FROM PROVEEDOR' [42000-193]
+2017-12-05 12:17:17 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Error de Sintaxis en sentencia SQL "SELECT P.NOMBRE, COUNT(A.ID_PROVEEDOR)FROM PROVEEDOR AS P, ARTICULO AS AWHERE P[*].ID = A.ID_PROVEEDORGROUP BY A.ID_PROVEEDOR"
+Syntax error in SQL statement "SELECT P.NOMBRE, COUNT(A.ID_PROVEEDOR)FROM PROVEEDOR AS P, ARTICULO AS AWHERE P[*].ID = A.ID_PROVEEDORGROUP BY A.ID_PROVEEDOR"; SQL statement:
+SELECT P.NOMBRE, COUNT(A.ID_PROVEEDOR)FROM PROVEEDOR AS P, ARTICULO AS AWHERE P.ID = A.ID_PROVEEDORGROUP BY A.ID_PROVEEDOR [42000-193]
+2017-12-05 12:23:41 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Tabla "ARTICULOWHERE" no encontrada
+Table "ARTICULOWHERE" not found; SQL statement:
+SELECT PROVEEDOR.NOMBRE, COUNT(ARTICULO.ID_PROVEEDOR)FROM PROVEEDOR, ARTICULOWHERE PROVEEDOR.ID = ARTICULO.ID_PROVEEDORGROUP BY ARTICULO.ID_PROVEEDOR [42102-193]
+2017-12-05 12:25:37 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Columna "A.ID_PROVEEDOR.DES" no encontrada
+Column "A.ID_PROVEEDOR.DES" not found; SQL statement:
+SELECT P.NOMBRE, COUNT(A.ID_PROVEEDOR)FROM PROVEEDOR AS P, ARTICULO AS A WHERE P.ID = A.ID_PROVEEDOR GROUP BY A.ID_PROVEEDOR.DES [42122-193]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:345)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.expression.ExpressionColumn.optimize(ExpressionColumn.java:147)
+	at org.h2.command.dml.Select.prepare(Select.java:853)
+	at org.h2.command.Parser.prepareCommand(Parser.java:259)
+	at org.h2.engine.Session.prepareLocal(Session.java:561)
+	at org.h2.engine.Session.prepareCommand(Session.java:502)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1203)
+	at org.h2.jdbc.JdbcStatement.executeQuery(JdbcStatement.java:73)
+	at ejercicio1.PrincipalEjercicio1.listadoProveedorMinimoUnProducto(PrincipalEjercicio1.java:61)
+	at ejercicio1.PrincipalEjercicio1.main(PrincipalEjercicio1.java:27)
+2017-12-05 12:25:48 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Error de Sintaxis en sentencia SQL "SELECT P.NOMBRE, COUNT(A.ID_PROVEEDOR)FROM PROVEEDOR AS P, ARTICULO AS A WHERE P.ID = A.ID_PROVEEDOR GROUP BY A.ID_PROVEEDOR DESC[*]"
+Syntax error in SQL statement "SELECT P.NOMBRE, COUNT(A.ID_PROVEEDOR)FROM PROVEEDOR AS P, ARTICULO AS A WHERE P.ID = A.ID_PROVEEDOR GROUP BY A.ID_PROVEEDOR DESC[*]"; SQL statement:
+SELECT P.NOMBRE, COUNT(A.ID_PROVEEDOR)FROM PROVEEDOR AS P, ARTICULO AS A WHERE P.ID = A.ID_PROVEEDOR GROUP BY A.ID_PROVEEDOR DESC [42000-193]
+2017-12-05 12:25:52 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Error de Sintaxis en sentencia SQL "SELECT P.NOMBRE, COUNT(A.ID_PROVEEDOR)FROM PROVEEDOR AS P, ARTICULO AS A WHERE P.ID = A.ID_PROVEEDOR GROUP BY A.ID_PROVEEDOR DES[*]"
+Syntax error in SQL statement "SELECT P.NOMBRE, COUNT(A.ID_PROVEEDOR)FROM PROVEEDOR AS P, ARTICULO AS A WHERE P.ID = A.ID_PROVEEDOR GROUP BY A.ID_PROVEEDOR DES[*]"; SQL statement:
+SELECT P.NOMBRE, COUNT(A.ID_PROVEEDOR)FROM PROVEEDOR AS P, ARTICULO AS A WHERE P.ID = A.ID_PROVEEDOR GROUP BY A.ID_PROVEEDOR DES [42000-193]
+2017-12-05 12:26:25 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Error de Sintaxis en sentencia SQL "SELECT P.NOMBRE, COUNT(A.ID_PROVEEDOR)FROM PROVEEDOR AS P, ARTICULO AS A WHERE P.ID = A.ID_PROVEEDOR GROUP BY A.ID_PROVEEDOR ASC[*]"
+Syntax error in SQL statement "SELECT P.NOMBRE, COUNT(A.ID_PROVEEDOR)FROM PROVEEDOR AS P, ARTICULO AS A WHERE P.ID = A.ID_PROVEEDOR GROUP BY A.ID_PROVEEDOR ASC[*]"; SQL statement:
+SELECT P.NOMBRE, COUNT(A.ID_PROVEEDOR)FROM PROVEEDOR AS P, ARTICULO AS A WHERE P.ID = A.ID_PROVEEDOR GROUP BY A.ID_PROVEEDOR ASC [42000-193]
+2017-12-05 12:26:33 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Columna "A.ID_PROVEEDOR.ASC" no encontrada
+Column "A.ID_PROVEEDOR.ASC" not found; SQL statement:
+SELECT P.NOMBRE, COUNT(A.ID_PROVEEDOR)FROM PROVEEDOR AS P, ARTICULO AS A WHERE P.ID = A.ID_PROVEEDOR GROUP BY A.ID_PROVEEDOR.ASC [42122-193]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:345)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.expression.ExpressionColumn.optimize(ExpressionColumn.java:147)
+	at org.h2.command.dml.Select.prepare(Select.java:853)
+	at org.h2.command.Parser.prepareCommand(Parser.java:259)
+	at org.h2.engine.Session.prepareLocal(Session.java:561)
+	at org.h2.engine.Session.prepareCommand(Session.java:502)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1203)
+	at org.h2.jdbc.JdbcStatement.executeQuery(JdbcStatement.java:73)
+	at ejercicio1.PrincipalEjercicio1.listadoProveedorMinimoUnProducto(PrincipalEjercicio1.java:61)
+	at ejercicio1.PrincipalEjercicio1.main(PrincipalEjercicio1.java:27)
+2017-12-05 12:26:45 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Función "ID_PROVEEDOR" no encontrada
+Function "ID_PROVEEDOR" not found; SQL statement:
+SELECT P.NOMBRE, COUNT(A.ID_PROVEEDOR)FROM PROVEEDOR AS P, ARTICULO AS A WHERE P.ID = A.ID_PROVEEDOR GROUP BY A.ID_PROVEEDOR(ASC) [90022-193]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:345)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.command.Parser.readJavaFunction(Parser.java:2421)
+	at org.h2.command.Parser.readFunction(Parser.java:2473)
+	at org.h2.command.Parser.readTermObjectDot(Parser.java:2682)
+	at org.h2.command.Parser.readTerm(Parser.java:2800)
+	at org.h2.command.Parser.readFactor(Parser.java:2324)
+	at org.h2.command.Parser.readSum(Parser.java:2311)
+	at org.h2.command.Parser.readConcat(Parser.java:2281)
+	at org.h2.command.Parser.readCondition(Parser.java:2128)
+	at org.h2.command.Parser.readAnd(Parser.java:2100)
+	at org.h2.command.Parser.readExpression(Parser.java:2092)
+	at org.h2.command.Parser.parseSelectSimple(Parser.java:2060)
+	at org.h2.command.Parser.parseSelectSub(Parser.java:1891)
+	at org.h2.command.Parser.parseSelectUnion(Parser.java:1709)
+	at org.h2.command.Parser.parseSelect(Parser.java:1697)
+	at org.h2.command.Parser.parsePrepared(Parser.java:445)
+	at org.h2.command.Parser.parse(Parser.java:317)
+	at org.h2.command.Parser.parse(Parser.java:289)
+	at org.h2.command.Parser.prepareCommand(Parser.java:254)
+	at org.h2.engine.Session.prepareLocal(Session.java:561)
+	at org.h2.engine.Session.prepareCommand(Session.java:502)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1203)
+	at org.h2.jdbc.JdbcStatement.executeQuery(JdbcStatement.java:73)
+	at ejercicio1.PrincipalEjercicio1.listadoProveedorMinimoUnProducto(PrincipalEjercicio1.java:61)
+	at ejercicio1.PrincipalEjercicio1.main(PrincipalEjercicio1.java:27)
+2017-12-05 12:27:48 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Error de Sintaxis en sentencia SQL "SELECT P.NOMBRE, COUNT(A.ID_PROVEEDOR) AS NUMERO_PRODUCTOSFROM PROVEEDOR[*] AS P, ARTICULO AS A WHERE P.ID = A.ID_PROVEEDOR ORDER BY NUMERO_PRODUCTOS DESGROUP BY A.ID_PROVEEDOR"
+Syntax error in SQL statement "SELECT P.NOMBRE, COUNT(A.ID_PROVEEDOR) AS NUMERO_PRODUCTOSFROM PROVEEDOR[*] AS P, ARTICULO AS A WHERE P.ID = A.ID_PROVEEDOR ORDER BY NUMERO_PRODUCTOS DESGROUP BY A.ID_PROVEEDOR"; SQL statement:
+SELECT P.NOMBRE, COUNT(A.ID_PROVEEDOR) AS NUMERO_PRODUCTOSFROM PROVEEDOR AS P, ARTICULO AS A WHERE P.ID = A.ID_PROVEEDOR ORDER BY NUMERO_PRODUCTOS DESGROUP BY A.ID_PROVEEDOR [42000-193]
+2017-12-05 12:27:53 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Error de Sintaxis en sentencia SQL "SELECT P.NOMBRE, COUNT(A.ID_PROVEEDOR) AS NUMERO_PRODUCTOSFROM PROVEEDOR[*] AS P, ARTICULO AS A WHERE P.ID = A.ID_PROVEEDOR ORDER BY NUMERO_PRODUCTOS DESCGROUP BY A.ID_PROVEEDOR"
+Syntax error in SQL statement "SELECT P.NOMBRE, COUNT(A.ID_PROVEEDOR) AS NUMERO_PRODUCTOSFROM PROVEEDOR[*] AS P, ARTICULO AS A WHERE P.ID = A.ID_PROVEEDOR ORDER BY NUMERO_PRODUCTOS DESCGROUP BY A.ID_PROVEEDOR"; SQL statement:
+SELECT P.NOMBRE, COUNT(A.ID_PROVEEDOR) AS NUMERO_PRODUCTOSFROM PROVEEDOR AS P, ARTICULO AS A WHERE P.ID = A.ID_PROVEEDOR ORDER BY NUMERO_PRODUCTOS DESCGROUP BY A.ID_PROVEEDOR [42000-193]
+2017-12-05 12:27:59 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Error de Sintaxis en sentencia SQL "SELECT P.NOMBRE, COUNT(A.ID_PROVEEDOR) AS NUMERO_PRODUCTOSFROM PROVEEDOR[*] AS P, ARTICULO AS A WHERE P.ID = A.ID_PROVEEDOR ORDER BY NUMERO_PRODUCTOS.DESCGROUP BY A.ID_PROVEEDOR"
+Syntax error in SQL statement "SELECT P.NOMBRE, COUNT(A.ID_PROVEEDOR) AS NUMERO_PRODUCTOSFROM PROVEEDOR[*] AS P, ARTICULO AS A WHERE P.ID = A.ID_PROVEEDOR ORDER BY NUMERO_PRODUCTOS.DESCGROUP BY A.ID_PROVEEDOR"; SQL statement:
+SELECT P.NOMBRE, COUNT(A.ID_PROVEEDOR) AS NUMERO_PRODUCTOSFROM PROVEEDOR AS P, ARTICULO AS A WHERE P.ID = A.ID_PROVEEDOR ORDER BY NUMERO_PRODUCTOS.DESCGROUP BY A.ID_PROVEEDOR [42000-193]
+2017-12-05 12:28:03 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Error de Sintaxis en sentencia SQL "SELECT P.NOMBRE, COUNT(A.ID_PROVEEDOR) AS NUMERO_PRODUCTOSFROM PROVEEDOR[*] AS P, ARTICULO AS A WHERE P.ID = A.ID_PROVEEDOR ORDER BY NUMERO_PRODUCTOS.DESGROUP BY A.ID_PROVEEDOR"
+Syntax error in SQL statement "SELECT P.NOMBRE, COUNT(A.ID_PROVEEDOR) AS NUMERO_PRODUCTOSFROM PROVEEDOR[*] AS P, ARTICULO AS A WHERE P.ID = A.ID_PROVEEDOR ORDER BY NUMERO_PRODUCTOS.DESGROUP BY A.ID_PROVEEDOR"; SQL statement:
+SELECT P.NOMBRE, COUNT(A.ID_PROVEEDOR) AS NUMERO_PRODUCTOSFROM PROVEEDOR AS P, ARTICULO AS A WHERE P.ID = A.ID_PROVEEDOR ORDER BY NUMERO_PRODUCTOS.DESGROUP BY A.ID_PROVEEDOR [42000-193]
+2017-12-05 12:28:08 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Error de Sintaxis en sentencia SQL "SELECT P.NOMBRE, COUNT(A.ID_PROVEEDOR) AS NUMERO_PRODUCTOSFROM PROVEEDOR[*] AS P, ARTICULO AS A WHERE P.ID = A.ID_PROVEEDOR ORDER BY NUMERO_PRODUCTOSGROUP BY A.ID_PROVEEDOR"
+Syntax error in SQL statement "SELECT P.NOMBRE, COUNT(A.ID_PROVEEDOR) AS NUMERO_PRODUCTOSFROM PROVEEDOR[*] AS P, ARTICULO AS A WHERE P.ID = A.ID_PROVEEDOR ORDER BY NUMERO_PRODUCTOSGROUP BY A.ID_PROVEEDOR"; SQL statement:
+SELECT P.NOMBRE, COUNT(A.ID_PROVEEDOR) AS NUMERO_PRODUCTOSFROM PROVEEDOR AS P, ARTICULO AS A WHERE P.ID = A.ID_PROVEEDOR ORDER BY NUMERO_PRODUCTOSGROUP BY A.ID_PROVEEDOR [42000-193]
+2017-12-05 12:28:17 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Error de Sintaxis en sentencia SQL "SELECT P.NOMBRE, COUNT(A.ID_PROVEEDOR) AS NUMERO_PRODUCTOS FROM PROVEEDOR AS P, ARTICULO AS A WHERE P.ID = A.ID_PROVEEDOR ORDER BY NUMERO_PRODUCTOSGROUP BY[*] A.ID_PROVEEDOR"
+Syntax error in SQL statement "SELECT P.NOMBRE, COUNT(A.ID_PROVEEDOR) AS NUMERO_PRODUCTOS FROM PROVEEDOR AS P, ARTICULO AS A WHERE P.ID = A.ID_PROVEEDOR ORDER BY NUMERO_PRODUCTOSGROUP BY[*] A.ID_PROVEEDOR"; SQL statement:
+SELECT P.NOMBRE, COUNT(A.ID_PROVEEDOR) AS NUMERO_PRODUCTOS FROM PROVEEDOR AS P, ARTICULO AS A WHERE P.ID = A.ID_PROVEEDOR ORDER BY NUMERO_PRODUCTOSGROUP BY A.ID_PROVEEDOR [42000-193]
+2017-12-05 12:28:23 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Error de Sintaxis en sentencia SQL "SELECT P.NOMBRE, COUNT(A.ID_PROVEEDOR) AS NUMERO_PRODUCTOS FROM PROVEEDOR AS P, ARTICULO AS A WHERE P.ID = A.ID_PROVEEDOR ORDER BY NUMERO_PRODUCTOS GROUP[*] BY A.ID_PROVEEDOR"
+Syntax error in SQL statement "SELECT P.NOMBRE, COUNT(A.ID_PROVEEDOR) AS NUMERO_PRODUCTOS FROM PROVEEDOR AS P, ARTICULO AS A WHERE P.ID = A.ID_PROVEEDOR ORDER BY NUMERO_PRODUCTOS GROUP[*] BY A.ID_PROVEEDOR"; SQL statement:
+SELECT P.NOMBRE, COUNT(A.ID_PROVEEDOR) AS NUMERO_PRODUCTOS FROM PROVEEDOR AS P, ARTICULO AS A WHERE P.ID = A.ID_PROVEEDOR ORDER BY NUMERO_PRODUCTOS GROUP BY A.ID_PROVEEDOR [42000-193]
+2017-12-05 13:02:47 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Tabla "ARTICULO" no encontrada
+Table "ARTICULO" not found; SQL statement:
+SELECT ARTICULO.* FROM ARTICULO AS A, PROVEEDOR AS P WHERE P.ID = A.ID_PROVVEDOR AND P.PAIS = 'España' [42102-193]
+2017-12-05 13:02:59 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Columna "A.ID_PROVVEDOR" no encontrada
+Column "A.ID_PROVVEDOR" not found; SQL statement:
+SELECT A.* FROM ARTICULO AS A, PROVEEDOR AS P WHERE P.ID = A.ID_PROVVEDOR AND P.PAIS = 'España' [42122-193]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:345)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.expression.ExpressionColumn.optimize(ExpressionColumn.java:147)
+	at org.h2.expression.Comparison.optimize(Comparison.java:180)
+	at org.h2.expression.ConditionAndOr.optimize(ConditionAndOr.java:130)
+	at org.h2.command.dml.Select.prepare(Select.java:856)
+	at org.h2.command.Parser.prepareCommand(Parser.java:259)
+	at org.h2.engine.Session.prepareLocal(Session.java:561)
+	at org.h2.engine.Session.prepareCommand(Session.java:502)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1203)
+	at org.h2.jdbc.JdbcStatement.executeQuery(JdbcStatement.java:73)
+	at ejercicio2.PrincipalEjercicio2.obtenerDatosArticulosEspanhaH2(PrincipalEjercicio2.java:106)
+	at ejercicio2.PrincipalEjercicio2.trasvase(PrincipalEjercicio2.java:72)
+	at ejercicio2.PrincipalEjercicio2.main(PrincipalEjercicio2.java:36)
+2017-12-05 13:18:26 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: El objeto ya está cerrado
+The object is already closed [90007-193]
+2017-12-05 13:18:40 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: El objeto ya está cerrado
+The object is already closed [90007-193]
+2017-12-05 13:19:07 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: El objeto ya está cerrado
+The object is already closed [90007-193]
+2017-12-05 13:20:19 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: El objeto ya está cerrado
+The object is already closed [90007-193]
+2017-12-05 13:20:24 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: El objeto ya está cerrado
+The object is already closed [90007-193]
+2017-12-05 13:20:45 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: El objeto ya está cerrado
+The object is already closed [90007-193]
+2017-12-05 13:22:12 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: El objeto ya está cerrado
+The object is already closed [90007-193]
+2017-12-05 13:22:28 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: El objeto ya está cerrado
+The object is already closed [90007-193]
